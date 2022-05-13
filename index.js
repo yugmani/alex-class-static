@@ -68,4 +68,10 @@ Person {
 */
 
 //call the 'sayHello()' method
-josh.sayHello();
+console.log(josh.sayHello()); //Hello, my name is Josh.
+
+//watch some tv show
+josh.watchSitcom(); //It will deduct 1 from iq = 125 => 124;
+
+//Tell me iq of josh
+console.log(josh.tellYourIq()); //124
