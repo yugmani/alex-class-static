@@ -75,3 +75,50 @@ josh.watchSitcom(); //It will deduct 1 from iq = 125 => 124;
 
 //Tell me iq of josh
 console.log(josh.tellYourIq()); //124
+
+// **************************************************
+// The Problem with Static Fields(hint:initialization)
+// ***************************************************
+
+//create class
+class Library {
+  // add and initialize static field for books
+  static books = [
+    { title: 'Lean Ux', read: true },
+    { title: 'Lean Customer Development', read: false },
+    { title: 'The Four Steps to the Epiphany', read: false },
+    { title: 'Lean Analytics', read: false },
+  ];
+
+  //Add second static field
+  static booksToReadCount = 3;
+}
+
+// log value of 'booksToReadCount' field
+console.log(Library.booksToReadCount); //3
+
+// Initializing static in constructor method
+// *************************************************
+
+//create class
+class MyLibrary {
+  // add and initialize static field for books
+  static books = [
+    { title: 'Lean Ux', read: true },
+    { title: 'Lean Customer Development', read: false },
+    { title: 'The Four Steps to the Epiphany', read: false },
+    { title: 'Lean Analytics', read: false },
+  ];
+
+  //Add static field, but don't initialize It
+  static booksToReadCount;
+
+  // Try to initialize static
+  // 'booksToReadCount in constructor
+  constructor() {
+    this.booksToReadCount = 3;
+  }
+}
+
+// Try to log the value of 'booksToReadCount' field
+console.log(MyLibrary.booksToReadCount); //undefined

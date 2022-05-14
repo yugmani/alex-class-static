@@ -26,7 +26,29 @@
       </ol>
     </li>
 
-    <li></li>
+    <li>
+      <h3>The Problem with Static Fields(hint:initialization)</h3>
+      <ol>
+        <li>
+          The constructor method does not allow to initialize static fields.This
+          may not be a real problem if all static fields you need can be
+          initialized when you define them. The usual way is to create new
+          static field and assign it some value.
+        </li>
+        <li>
+          What if we want to initialize the static field more dynamically? For
+          example: for Library class, it requires manual update of both fields;
+          books and booksToReadCount to keep them in sync.
+        </li>
+        <li>
+          We may define a static field without initializing it, or initialize it
+          with some placeholder value. Then add constructor and use it to update
+          the value of that static field. But this
+          <strong>doesn't work</strong>. That field remains
+          <em>undefined</em> or keep the placeholder value.
+        </li>
+      </ol>
+    </li>
     <li></li>
     <li></li>
   </ul>
