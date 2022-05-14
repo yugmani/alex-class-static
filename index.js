@@ -147,3 +147,32 @@ function getBooksToReadCount(books) {
 
 // Log value of 'version' field
 console.log(ExternalResourcesLibrary.booksToReadCount); //3
+
+// Solution with static initialization blocks
+// **********************************************************
+
+//create class
+class BlocksLibrary {
+  // add and initialize static field for books
+  static books = [
+    { title: 'Lean Ux', read: true },
+    { title: 'Lean Customer Development', read: false },
+    { title: 'The Four Steps to the Epiphany', read: false },
+    { title: 'Lean Analytics', read: false },
+  ];
+
+  //define static field for count, but don't initialize it
+  static booksToReadCount;
+
+  // ********* proposal only ************** ??
+  // so there will be error while implementing it right now.
+
+  //Add static initialization block;
+  // static {
+  //   //initialize the 'booksToReadCount' field
+  //   this.booksToReadCount = this.books.filter((book) => !book.read).length;
+  // }
+}
+
+// Log value of 'version' field
+// console.log('Block: ' + BlocksLibrary.booksToReadCount);

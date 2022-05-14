@@ -68,7 +68,56 @@
         </li>
       </ol>
     </li>
-    <li></li>
+    <li>
+      <h3>Solution with Static Initialization Blocks</h3>
+      <ol>
+        <li>
+          <strong>Static initialization blocks</strong> is an alternative
+          solution offered by ES2022.
+        </li>
+        <li>
+          These static initialization blocks allow us to create code blocks
+          inside the class. We can use these blocks to execute any operation we
+          need.
+        </li>
+        <li>
+          We define the class and define the first static field for example
+          'books' and assign it with the array of 'books'. Next, we define the
+          second field such as 'booksToReadCount', but we don't initialize it.
+        </li>
+        <li>
+          Now we add the static initialization block and in this block we
+          execute any necessary operation and initialize the booksToReadCount.
+        </li>
+      </ol>
+    </li>
+    <li>
+      <h3>Syntax and rules for static initialization blocks</h3>
+      <ol>
+        <li>
+          The syntax is very simple. There is a 'static' keyword and code block
+          defined with curly braces({}). Inside the code block, we put the code
+          that we want to execute including the initialization of static fields.
+        </li>
+        <li>
+          Every code block creates new block scope. So, it is useful to create
+          temporary variables we may need. Note that this applies only to
+          block-scoped variables 'const' and 'let' but not to 'var'.
+        </li>
+        <li>
+          We can have as many static initialization blocks in a class as we
+          need.
+        </li>
+        <li>
+          Static blocks are executed during the execution of initializers of
+          static fields.
+        </li>
+        <li>
+          If we extend classes, static fields of a superclass will be executed
+          before the static fields of its subclasses.
+        </li>
+      </ol>
+    </li>
   </ul>
   <p>
     <a href="https://blog.alexdevero.com/class-static-initialization-blocks/"
