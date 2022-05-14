@@ -122,3 +122,28 @@ class MyLibrary {
 
 // Try to log the value of 'booksToReadCount' field
 console.log(MyLibrary.booksToReadCount); //undefined
+
+// Solution with External Resources
+// ***************************************************
+
+//create class
+class ExternalResourcesLibrary {
+  // add and initialize static field for books
+  static books = [
+    { title: 'Lean Ux', read: true },
+    { title: 'Lean Customer Development', read: false },
+    { title: 'The Four Steps to the Epiphany', read: false },
+    { title: 'Lean Analytics', read: false },
+  ];
+
+  //Add static field, and assign it the returned value of 'getBooksToReadCount()' function
+  static booksToReadCount = getBooksToReadCount(ExternalResourcesLibrary.books);
+}
+
+//create function to get booksToReadCount
+function getBooksToReadCount(books) {
+  return books.filter((book) => !book.read).length;
+}
+
+// Log value of 'version' field
+console.log(ExternalResourcesLibrary.booksToReadCount); //3
